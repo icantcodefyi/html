@@ -127,6 +127,20 @@
         fill: #e5e5e5;
       }
 
+      @media (max-width: 768px) {
+        .theme-toggle svg {
+          width: 16px;
+          height: 16px;
+        }
+      }
+
+      @media (max-width: 480px) {
+        .theme-toggle svg {
+          width: 14px;
+          height: 14px;
+        }
+      }
+
       .header-content {
         display: flex;
         gap: 16px;
@@ -1058,13 +1072,19 @@
         }
       }
 
-      // Load saved theme on page load
+      // Load saved theme on page load or use system preference
       document.addEventListener("DOMContentLoaded", function () {
         const savedTheme = localStorage.getItem("theme");
         const moonIcon = document.getElementById("theme-icon-moon");
         const sunIcon = document.getElementById("theme-icon-sun");
+        const prefersDark = window.matchMedia(
+          "(prefers-color-scheme: dark)"
+        ).matches;
 
-        if (savedTheme === "dark") {
+        // If no saved theme, use system preference
+        const shouldUseDark = savedTheme ? savedTheme === "dark" : prefersDark;
+
+        if (shouldUseDark) {
           document.body.classList.add("dark-theme");
           moonIcon.style.display = "none";
           sunIcon.style.display = "block";
