@@ -1,0 +1,969 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Aniruddh</title>
+    <meta
+      name="description"
+      content="I like to code. Currently working as a Product Engineer at Supernova. I build with Next.js, Nest.js, Prisma, Solana and other modern tools."
+    />
+    <meta name="author" content="Aniruddh" />
+    <meta
+      name="keywords"
+      content="Aniruddh, Product Engineer, Software Engineer, Next.js, Nest.js, Prisma, Solana, Web Development, Hackathons"
+    />
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/jpeg" href="images/favicon.webp" />
+    <link rel="apple-touch-icon" href="images/favicon.webp" />
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta
+      property="og:title"
+      content="Aniruddh - Product Engineer & Developer"
+    />
+    <meta
+      property="og:description"
+      content="I like to code. Currently working as a Product Engineer at Supernova. I build with Next.js, Nest.js, Prisma, Solana and other modern tools."
+    />
+    <meta property="og:image" content="images/favicon.webp" />
+    <meta property="og:url" content="https://x.com/icantcodefyi" />
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:site" content="@icantcodefyi" />
+    <meta name="twitter:creator" content="@icantcodefyi" />
+    <meta
+      name="twitter:title"
+      content="Aniruddh - Product Engineer & Developer"
+    />
+    <meta
+      name="twitter:description"
+      content="I like to code. Currently working as a Product Engineer at Supernova. I build with Next.js, Nest.js, Prisma, Solana and other modern tools."
+    />
+    <meta name="twitter:image" content="images/favicon.webp" />
+
+    <!-- Theme Color -->
+    <meta name="theme-color" content="#ffffff" />
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+        line-height: 1.6;
+        color: #000;
+        background: #fff;
+      }
+
+      .banner-container {
+        max-width: 800px;
+        margin: 40px auto 0;
+        padding: 0 20px;
+      }
+
+      .banner {
+        width: 100%;
+        height: auto;
+        max-height: 500px;
+        object-fit: cover;
+        display: block;
+        border-radius: 8px;
+      }
+
+      main {
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 40px 20px;
+      }
+
+      header {
+        margin-bottom: 40px;
+      }
+
+      .header-content {
+        display: flex;
+        gap: 16px;
+        margin-bottom: 0;
+      }
+
+      .profile-pic {
+        width: 80px;
+        height: 80px;
+        border-radius: 50%;
+        object-fit: cover;
+        flex-shrink: 0;
+      }
+
+      .header-text {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+      }
+
+      h1 {
+        font-size: 24px;
+        margin-bottom: 0;
+      }
+
+      .twitter-handle {
+        color: #000;
+        text-decoration: none;
+        font-size: 16px;
+        font-weight: normal;
+      }
+
+      .name-link {
+        color: #000;
+        text-decoration: none;
+        font-weight: 600;
+        font-size: 24px;
+      }
+
+      .bio {
+        margin: 0;
+        font-size: 16px;
+      }
+
+      section {
+        margin-bottom: 40px;
+      }
+
+      h2 {
+        font-size: 20px;
+        margin-bottom: 20px;
+        border-bottom: 1px solid #e0e0e0;
+        padding-bottom: 10px;
+      }
+
+      .experience-item {
+        margin-bottom: 16px;
+        line-height: 1.4;
+      }
+
+      .company-name {
+        font-weight: 600;
+        font-size: 16px;
+        display: inline;
+        color: #000;
+        text-decoration: none;
+      }
+
+      .company-name:hover {
+        text-decoration: underline;
+      }
+
+      .role {
+        font-size: 14px;
+        color: #666;
+        display: inline;
+      }
+
+      .experience-meta {
+        font-size: 14px;
+        color: #666;
+        margin-top: 2px;
+      }
+
+      .location,
+      .dates {
+        display: inline;
+      }
+
+      .separator {
+        margin: 0 8px;
+        color: #ccc;
+      }
+
+      .project-item {
+        margin-bottom: 24px;
+      }
+
+      .project-header {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        margin-bottom: 8px;
+      }
+
+      .project-title {
+        font-weight: 600;
+        font-size: 16px;
+      }
+
+      .project-links {
+        display: flex;
+        gap: 6px;
+      }
+
+      .project-links a {
+        color: #0066cc;
+        text-decoration: none;
+        margin-right: 16px;
+        font-size: 14px;
+      }
+
+      .project-links a:hover {
+        text-decoration: underline;
+      }
+
+      .project-description {
+        font-size: 14px;
+        color: #333;
+        margin-bottom: 8px;
+      }
+
+      .project-tags {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px;
+      }
+
+      .tag {
+        font-size: 12px;
+        background: #f0f0f0;
+        padding: 4px 8px;
+        border-radius: 4px;
+      }
+
+      .hidden {
+        display: none;
+      }
+
+      .load-more-btn {
+        background: none;
+        border: none;
+        color: #000;
+        padding: 0;
+        cursor: pointer;
+        font-size: 14px;
+        margin-top: 16px;
+        text-decoration: underline;
+      }
+
+      .hackathon-item {
+        margin-bottom: 24px;
+      }
+
+      .hackathon-name {
+        font-weight: 600;
+        font-size: 16px;
+      }
+
+      .hackathon-venue {
+        font-size: 14px;
+        color: #666;
+      }
+
+      .hackathon-description {
+        font-size: 14px;
+        color: #333;
+        margin-top: 8px;
+      }
+
+      .masonry-container {
+        column-count: 3;
+        column-gap: 16px;
+        margin-top: 20px;
+      }
+
+      .masonry-item {
+        break-inside: avoid;
+        margin-bottom: 16px;
+        overflow: hidden;
+        border-radius: 8px;
+      }
+
+      .masonry-item img {
+        width: 100%;
+        height: auto;
+        display: block;
+        border-radius: 8px;
+        transition: transform 0.3s ease;
+      }
+
+      .masonry-item img:hover {
+        transform: scale(1.05);
+      }
+
+      @media (max-width: 768px) {
+        .masonry-container {
+          column-count: 2;
+        }
+
+        .bio {
+          font-size: 14px;
+        }
+      }
+
+      @media (max-width: 480px) {
+        .masonry-container {
+          column-count: 1;
+        }
+
+        .bio {
+          font-size: 13px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <header>
+        <div class="header-content">
+          <img src="images/pfp.jpg" alt="Aniruddh" class="profile-pic" />
+          <div class="header-text">
+            <div>
+              <h1>
+                <a
+                  href="https://x.com/icantcodefyi"
+                  class="name-link"
+                  target="_blank"
+                  >Aniruddh</a
+                >
+                <a
+                  href="https://x.com/icantcodefyi"
+                  class="twitter-handle"
+                  target="_blank"
+                  >@icantcodefyi</a
+                >
+              </h1>
+            </div>
+            <p class="bio">
+              I like to code. rn messing with Next.js, Nest.js, Prisma, Solana
+              and some other tooling :p
+            </p>
+          </div>
+        </div>
+      </header>
+
+      <section>
+        <h2>Experience</h2>
+        <div class="experience-item">
+          <div>
+            <a
+              href="https://www.getsupernova.ai/"
+              class="company-name"
+              target="_blank"
+              >Supernova</a
+            >
+            -
+            <span class="role">Product Engineer</span>
+          </div>
+          <div class="experience-meta">
+            <span class="location">Bengaluru, India</span
+            ><span class="separator">•</span
+            ><span class="dates">July - Present</span>
+          </div>
+        </div>
+        <div class="experience-item">
+          <div>
+            <a
+              href="https://www.getmerlin.in/"
+              class="company-name"
+              target="_blank"
+              >Merlin AI</a
+            >
+            -
+            <span class="role">Software Engineer Intern</span>
+          </div>
+          <div class="experience-meta">
+            <span class="location">Bengaluru, India</span
+            ><span class="separator">•</span
+            ><span class="dates">Sept 2024 - Feb 2025</span>
+          </div>
+        </div>
+        <div class="experience-item">
+          <div>
+            <a
+              href="https://www.techkareer.com/"
+              class="company-name"
+              target="_blank"
+              >TechKareer</a
+            >
+            -
+            <span class="role">Software Engineer Intern</span>
+          </div>
+          <div class="experience-meta">
+            <span class="location">Remote</span><span class="separator">•</span
+            ><span class="dates">Jun 2024 - Aug 2024</span>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <h2>Projects</h2>
+        <div id="projects-container">
+          <div class="project-item">
+            <div class="project-header">
+              <div class="project-title">elafda</div>
+              <div class="project-links">
+                <a href="https://elafda.fun/">Live</a>
+                <a href="https://github.com/icantcodefyi/elafda">GitHub</a>
+              </div>
+            </div>
+            <div class="project-description">
+              A comprehensive discussion platform built with Next.js 15,
+              featuring Twitter integration, interactive polls, threaded
+              comments, and modern UI/UX.
+            </div>
+            <div class="project-tags">
+              <span class="tag">Next.js 15</span>
+              <span class="tag">React 19</span>
+              <span class="tag">TypeScript</span>
+              <span class="tag">Shadcn UI</span>
+              <span class="tag">Tailwind CSS</span>
+            </div>
+          </div>
+
+          <div class="project-item">
+            <div class="project-header">
+              <div class="project-title">doblar</div>
+              <div class="project-links">
+                <a href="https://doblar.ani.ink/">Live</a>
+              </div>
+            </div>
+            <div class="project-description">
+              Doblar is a fully local image converter. No files are sent
+              anywhere as the conversion is completely local, ensuring privacy
+              and security.
+            </div>
+            <div class="project-tags">
+              <span class="tag">Image Converter</span>
+              <span class="tag">Local Processing</span>
+              <span class="tag">Privacy</span>
+              <span class="tag">TypeScript</span>
+              <span class="tag">React</span>
+            </div>
+          </div>
+
+          <div class="project-item">
+            <div class="project-header">
+              <div class="project-title">annu's poems</div>
+              <div class="project-links">
+                <a href="https://annnu.art/">Live</a>
+              </div>
+            </div>
+            <div class="project-description">
+              A collection of poems written by my precious - Annu.
+            </div>
+            <div class="project-tags">
+              <span class="tag">Next.js</span>
+              <span class="tag">TypeScript</span>
+              <span class="tag">Tailwind CSS</span>
+              <span class="tag">Shadcn UI</span>
+            </div>
+          </div>
+
+          <div class="project-item">
+            <div class="project-header">
+              <div class="project-title">invoicely</div>
+              <div class="project-links">
+                <a href="https://invoicely.gg/">Live</a>
+                <a href="https://github.com/legions-developer/invoicely"
+                  >GitHub</a
+                >
+              </div>
+            </div>
+            <div class="project-description">
+              Invoicely is a simple and easy to use invoice generator where you
+              can create beautiful and professional invoices in minutes. ~
+              Proudly OSS
+            </div>
+            <div class="project-tags">
+              <span class="tag">Next.js</span>
+              <span class="tag">TypeScript</span>
+              <span class="tag">Pdfjs</span>
+            </div>
+          </div>
+
+          <div class="project-item">
+            <div class="project-header">
+              <div class="project-title">autodiagram</div>
+              <div class="project-links">
+                <a href="https://autodiagram.com/">Live</a>
+                <a href="https://github.com/icantcodefyi/diagram">GitHub</a>
+              </div>
+            </div>
+            <div class="project-description">
+              An AI-powered diagram generation tool that transforms text
+              descriptions into professional diagrams. Supports 20+ diagram
+              types.
+            </div>
+            <div class="project-tags">
+              <span class="tag">AI</span>
+              <span class="tag">Diagram Generation</span>
+              <span class="tag">Next.js</span>
+              <span class="tag">TypeScript</span>
+              <span class="tag">SaaS</span>
+            </div>
+          </div>
+
+          <div class="project-item hidden">
+            <div class="project-header">
+              <div class="project-title">cattype</div>
+              <div class="project-links">
+                <a href="https://cattype.live/">Live</a>
+                <a href="https://github.com/icantcodefyi/cattype">GitHub</a>
+              </div>
+            </div>
+            <div class="project-description">
+              A modern, customizable typing practice application featuring
+              multiple themes, coding snippets, and real-time statistics.
+            </div>
+            <div class="project-tags">
+              <span class="tag">Next.js</span>
+              <span class="tag">TypeScript</span>
+              <span class="tag">Typing Practice</span>
+              <span class="tag">Tailwind CSS</span>
+            </div>
+          </div>
+
+          <div class="project-item hidden">
+            <div class="project-header">
+              <div class="project-title">aurastake</div>
+              <div class="project-links">
+                <a href="https://aurastake.xyz/">Live</a>
+              </div>
+            </div>
+            <div class="project-description">
+              A decentralized productivity tool that uses SOL staking and Aura
+              points to incentivize consistent daily work habits.
+            </div>
+            <div class="project-tags">
+              <span class="tag">Productivity</span>
+              <span class="tag">Staking</span>
+              <span class="tag">Solana</span>
+              <span class="tag">Next.js</span>
+              <span class="tag">TypeScript</span>
+            </div>
+          </div>
+
+          <div class="project-item hidden">
+            <div class="project-header">
+              <div class="project-title">getaresume</div>
+              <div class="project-links">
+                <a href="https://getaresu.me/">Live</a>
+              </div>
+            </div>
+            <div class="project-description">
+              A resume to portfolio website tool that allows you to create a web
+              resume in minutes.
+            </div>
+            <div class="project-tags">
+              <span class="tag">Resume</span>
+              <span class="tag">Portfolio</span>
+            </div>
+          </div>
+
+          <div class="project-item hidden">
+            <div class="project-header">
+              <div class="project-title">buildaresume</div>
+              <div class="project-links">
+                <a href="https://buildaresume.vercel.app/">Live</a>
+              </div>
+            </div>
+            <div class="project-description">
+              A resume builder that allows you to create a resume in minutes
+              based off your linkedin and github profiles.
+            </div>
+            <div class="project-tags">
+              <span class="tag">Resume</span>
+              <span class="tag">Portfolio</span>
+            </div>
+          </div>
+
+          <div class="project-item hidden">
+            <div class="project-header">
+              <div class="project-title">school results</div>
+              <div class="project-links">
+                <a href="https://lkpsresult.vercel.app/">Live</a>
+              </div>
+            </div>
+            <div class="project-description">
+              An app that generates results for a pre-primary school.
+            </div>
+            <div class="project-tags">
+              <span class="tag">School</span>
+              <span class="tag">Results</span>
+            </div>
+          </div>
+        </div>
+        <button class="load-more-btn" onclick="loadMoreProjects()">
+          Load More
+        </button>
+      </section>
+
+      <section>
+        <h2>Hackathon Wins</h2>
+        <div id="hackathons-container">
+          <div class="hackathon-item">
+            <div class="hackathon-name">The Better Hack</div>
+            <div class="hackathon-venue">WeWork Pune</div>
+            <div class="hackathon-description">
+              Won 2nd prize for making an ai based local seo agent which helps
+              local businesses gain more visibility.
+            </div>
+          </div>
+
+          <div class="hackathon-item">
+            <div class="hackathon-name">EthIndia 2024</div>
+            <div class="hackathon-venue">KTPO Bangalore</div>
+            <div class="hackathon-description">
+              Won polkadot track for making a drag and drop smart contract
+              builder.
+            </div>
+          </div>
+
+          <div class="hackathon-item hidden">
+            <div class="hackathon-name">Unfold 2024</div>
+            <div class="hackathon-venue">Marriot Bangalore</div>
+            <div class="hackathon-description">
+              Won nethermind sponsor track for making an autonomous ai agent
+              which can interact with blockchain and deploy its own smart
+              contracts
+            </div>
+          </div>
+
+          <div class="hackathon-item hidden">
+            <div class="hackathon-name">EthIndia 2023</div>
+            <div class="hackathon-venue">KTPO Bangalore</div>
+            <div class="hackathon-description">
+              My first flight to Blr, won multiple sponsor tracks here.
+            </div>
+          </div>
+
+          <div class="hackathon-item hidden">
+            <div class="hackathon-name">WebGranth</div>
+            <div class="hackathon-venue">CDGI Indore</div>
+            <div class="hackathon-description">
+              Won 1st prize for making a all in one platform for learning new
+              frameworks, technologies.
+            </div>
+          </div>
+
+          <div class="hackathon-item hidden">
+            <div class="hackathon-name">Hakxite</div>
+            <div class="hackathon-description">
+              Won 1st prize for an ai based solution for deaf and dumb people.
+            </div>
+          </div>
+
+          <div class="hackathon-item hidden">
+            <div class="hackathon-name">HackVSIT 5.0</div>
+            <div class="hackathon-venue">VSIT Delhi</div>
+            <div class="hackathon-description">
+              Won 3rd prize for making an csv analyser which generates dashboard
+              based off the data.
+            </div>
+          </div>
+
+          <div class="hackathon-item hidden">
+            <div class="hackathon-name">HackHive</div>
+            <div class="hackathon-venue">DAVV Indore</div>
+            <div class="hackathon-description">
+              Won 1st prize for making an ai agent which let you interact with
+              websites.
+            </div>
+          </div>
+
+          <div class="hackathon-item hidden">
+            <div class="hackathon-name">Udaymitsav '24</div>
+            <div class="hackathon-venue">IIT Jammu</div>
+            <div class="hackathon-description">
+              Won 1st in my track and overall 2nd prize for making a micro
+              blogging solution.
+            </div>
+          </div>
+
+          <div class="hackathon-item hidden">
+            <div class="hackathon-name">Genesis 1.0</div>
+            <div class="hackathon-venue">SRM Chennai</div>
+            <div class="hackathon-description">
+              Won berachain track for making a web3 native game.
+            </div>
+          </div>
+
+          <div class="hackathon-item hidden">
+            <div class="hackathon-name">Syntax Error X</div>
+            <div class="hackathon-venue">IIT Roorkee</div>
+            <div class="hackathon-description">
+              Won manga maestro track, made a platform to submit your mangas and
+              ai which tags them as nsfw or other tags.
+            </div>
+          </div>
+
+          <div class="hackathon-item hidden">
+            <div class="hackathon-name">Version Beta</div>
+            <div class="hackathon-venue">MANIT Bhopal</div>
+            <div class="hackathon-description">
+              Got 3rd place for making an blockchain based financial companion.
+            </div>
+          </div>
+
+          <div class="hackathon-item hidden">
+            <div class="hackathon-name">Hackistica '23</div>
+            <div class="hackathon-venue">IIT Indore</div>
+            <div class="hackathon-description">
+              My first hackathon and first win. Made a leetcode chrome extension
+              here.
+            </div>
+          </div>
+        </div>
+        <button class="load-more-btn" onclick="loadMoreHackathons()">
+          Load More
+        </button>
+      </section>
+
+      <section>
+        <h2>Hackathons Organised</h2>
+        <div class="hackathon-item">
+          <div class="hackathon-name">Imagine Hackathon</div>
+          <div class="hackathon-venue">Piwot PanIIT</div>
+          <div class="hackathon-description">
+            Main organiser of the hackathon with Animesh, handled all the tech
+            stuff onsite and operations in the hackathon. Went to Mumbai while
+            my end sems were going on, did the hackathon, had accident ( fell
+            from train ), came back Indore, gave my end sems, got 7.9 sgpa.
+          </div>
+        </div>
+
+        <div class="hackathon-item">
+          <div class="hackathon-name">HackWave 2024</div>
+          <div class="hackathon-venue">CDGI Indore</div>
+          <div class="hackathon-description">
+            My college's first hackathon. Did everything with a team of 3, from
+            sending proposal to director, all the operations, designing swags,
+            promotion, website ( https://hackwavee.vercel.app/ ) , got over 500
+            registrations , 40 teams offline in campus for the hackathon.
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <h2>Gallery</h2>
+        <div class="masonry-container">
+          <div class="masonry-item">
+            <img
+              src="images/image1.webp"
+              alt="Gallery image 1"
+              loading="lazy"
+              decoding="async"
+            />
+          </div>
+          <div class="masonry-item">
+            <img
+              src="images/image2.webp"
+              alt="Gallery image 2"
+              loading="lazy"
+              decoding="async"
+            />
+          </div>
+          <div class="masonry-item">
+            <img
+              src="images/image3.webp"
+              alt="Gallery image 3"
+              loading="lazy"
+              decoding="async"
+            />
+          </div>
+          <div class="masonry-item">
+            <img
+              src="images/image4.webp"
+              alt="Gallery image 4"
+              loading="lazy"
+              decoding="async"
+            />
+          </div>
+          <div class="masonry-item">
+            <img
+              src="images/image5.webp"
+              alt="Gallery image 5"
+              loading="lazy"
+              decoding="async"
+            />
+          </div>
+          <div class="masonry-item">
+            <img
+              src="images/image6.webp"
+              alt="Gallery image 6"
+              loading="lazy"
+              decoding="async"
+            />
+          </div>
+          <div class="masonry-item">
+            <img
+              src="images/image7.webp"
+              alt="Gallery image 7"
+              loading="lazy"
+              decoding="async"
+            />
+          </div>
+          <div class="masonry-item">
+            <img
+              src="images/image8.webp"
+              alt="Gallery image 8"
+              loading="lazy"
+              decoding="async"
+            />
+          </div>
+          <div class="masonry-item">
+            <img
+              src="images/image9.webp"
+              alt="Gallery image 9"
+              loading="lazy"
+              decoding="async"
+            />
+          </div>
+          <div class="masonry-item">
+            <img
+              src="images/image10.webp"
+              alt="Gallery image 10"
+              loading="lazy"
+              decoding="async"
+            />
+          </div>
+          <div class="masonry-item">
+            <img
+              src="images/image11.webp"
+              alt="Gallery image 11"
+              loading="lazy"
+              decoding="async"
+            />
+          </div>
+          <div class="masonry-item">
+            <img
+              src="images/image12.webp"
+              alt="Gallery image 12"
+              loading="lazy"
+              decoding="async"
+            />
+          </div>
+          <div class="masonry-item">
+            <img
+              src="images/image13.webp"
+              alt="Gallery image 13"
+              loading="lazy"
+              decoding="async"
+            />
+          </div>
+          <div class="masonry-item">
+            <img
+              src="images/image14.webp"
+              alt="Gallery image 14"
+              loading="lazy"
+              decoding="async"
+            />
+          </div>
+          <div class="masonry-item">
+            <img
+              src="images/image16.webp"
+              alt="Gallery image 16"
+              loading="lazy"
+              decoding="async"
+            />
+          </div>
+          <div class="masonry-item">
+            <img
+              src="images/image17.webp"
+              alt="Gallery image 17"
+              loading="lazy"
+              decoding="async"
+            />
+          </div>
+          <div class="masonry-item">
+            <img
+              src="images/image18.webp"
+              alt="Gallery image 18"
+              loading="lazy"
+              decoding="async"
+            />
+          </div>
+          <div class="masonry-item">
+            <img
+              src="images/image19.webp"
+              alt="Gallery image 19"
+              loading="lazy"
+              decoding="async"
+            />
+          </div>
+          <div class="masonry-item">
+            <img
+              src="images/image20.webp"
+              alt="Gallery image 20"
+              loading="lazy"
+              decoding="async"
+            />
+          </div>
+          <div class="masonry-item">
+            <img
+              src="images/image21.webp"
+              alt="Gallery image 21"
+              loading="lazy"
+              decoding="async"
+            />
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <script>
+      let projectsExpanded = false;
+      let hackathonsExpanded = false;
+
+      function loadMoreProjects() {
+        const container = document.getElementById("projects-container");
+        const buttons = document.querySelectorAll(".load-more-btn");
+        const button = buttons[0]; // First button is for projects
+
+        if (!projectsExpanded) {
+          // Show hidden items
+          const hiddenItems = container.querySelectorAll(
+            ".project-item.hidden"
+          );
+          hiddenItems.forEach((item) => item.classList.remove("hidden"));
+          button.textContent = "Show Less";
+          projectsExpanded = true;
+        } else {
+          // Hide items that should be hidden (all project items beyond the first 5)
+          const allItems = container.querySelectorAll(".project-item");
+          for (let i = 5; i < allItems.length; i++) {
+            allItems[i].classList.add("hidden");
+          }
+          button.textContent = "Load More";
+          projectsExpanded = false;
+        }
+      }
+
+      function loadMoreHackathons() {
+        const container = document.getElementById("hackathons-container");
+        const buttons = document.querySelectorAll(".load-more-btn");
+        const button = buttons[1]; // Second button is for hackathons
+
+        if (!hackathonsExpanded) {
+          // Show hidden items
+          const hiddenItems = container.querySelectorAll(
+            ".hackathon-item.hidden"
+          );
+          hiddenItems.forEach((item) => item.classList.remove("hidden"));
+          button.textContent = "Show Less";
+          hackathonsExpanded = true;
+        } else {
+          // Hide items that should be hidden (all hackathon items beyond the first 2)
+          const allItems = container.querySelectorAll(".hackathon-item");
+          for (let i = 2; i < allItems.length; i++) {
+            allItems[i].classList.add("hidden");
+          }
+          button.textContent = "Load More";
+          hackathonsExpanded = false;
+        }
+      }
+    </script>
+  </body>
+</html>
